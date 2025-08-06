@@ -27,7 +27,7 @@ function App() {
                 <Route path="/exchanges" element={<Exchanges />} />
                 <Route
                   path="/cryptocurrencies"
-                  element={<Cryptocurrencies />}
+                  element={<Cryptocurrencies simplified={false} />}
                 />
                 <Route path="/crypto/:coinId" element={<CryptoDetails />} />
                 <Route path="/news" element={<News />} />
