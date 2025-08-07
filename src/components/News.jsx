@@ -13,44 +13,37 @@ const News = ({ simplified }) => {
     count: simplified ? 6 : 12,
   });
   console.log("news", cryptoNews);
-  if (error) return <div>Error loading news</div>;
-  console.log(error);
 
-  if (!cryptoNews?.value) return "Loading...";
+  if (!cryptoNews) return "Loading...";
+  console.log(error);
   return (
     <Row gutter={[24, 24]}>
-      {cryptoNews.value.map((news) => (
-        <Col xs={24} sm={12} lg={8} key={i}>
+      {cryptoNews.map((news, i) => (
+        <Col xs={24} sm={12} md={12} xl={8}  key={i}>
           <Card hoverable className="news-card">
-            <a href={news.url} target="_blank" rel="noreferrer">
+            <a href={news.link} target="_blank" rel="noreferrer">
               <div className="news-image-container">
-                <Title className="news-title" level={4}>
-                  {news.name}
+                
+                <Title className="news-title" level={5}>
+                  {news.title}
                 </Title>
                 <img
-                style={{ maxWidth: "200px", maxHeight: "100px" }}
-                  src={news?.image?.thumbnail?.contentUrl || demoImg}
+                  style={{ width: "100px", height: "80px", objectFit: "cover"}}
+                  src={news.media || demoImg}
                   alt="news"
                 />
+                
               </div>
               <p>
-                {news.description.length > 100
-                  ? `${news.description.substring(0, 100)}...`
-                  : news.description}
+                {news.summary.length > 100
+                  ? `${news.summary.substring(0, 200)}...`
+                  : news.summary}
               </p>
               <div className="provider-container">
-                <div>
-                  <Avatar
-                    src={
-                      news.provider[0]?.image?.thumbnail?.contentUrl || demoImg
-                    }
-                    alt="news"
-                  />
-                  <Text className="provider-name" >{news.provider[0]?.name}</Text>
-                </div>
-                <Text>
-                  {moment(news.datePublished).startOf("ss").fromNow()}
-                </Text>
+                  <Text className="provider-name">
+                    {news.authors?.[0]?.name || "Unknown"}
+                  </Text>
+                <Text >{moment(news.published).fromNow()}</Text>
               </div>
             </a>
           </Card>

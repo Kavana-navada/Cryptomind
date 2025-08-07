@@ -297,25 +297,25 @@ a:hover{
     display: flex !important;
     justify-content: space-between !important;
 }
-.news-title{
-width: 70%;
-}
+
 
 .news-image-container .img{
     width:100px;
-    height:100px;
+    height:80px;
 }
 .news-card p{
-    color: black;
+    color: gray;
     margin: 10px 0px !important;
 }
 .provider-container{
-    display: flex;
+    display: flex  ;
     justify-content: space-between;
+    position:absolute;
+    bottom: 10px;
+    width: 85%;
+
 }
-.provider-name{
-    margin-left: 10px;
-}
+
 
 .chart-header{
     display: flex;
