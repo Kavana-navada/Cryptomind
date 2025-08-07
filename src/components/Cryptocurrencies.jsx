@@ -17,6 +17,7 @@ const Cryptocurrencies = ({ simplified }) => {
     setCryptos(filterdData);
   }, [searchItem, cryptosList]);
   if (isFecthing) return "Loading...";
+  console.log("cryptos", cryptos);
   return (
     <>
       {!simplified && (
