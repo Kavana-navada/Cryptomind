@@ -10,7 +10,7 @@ import {
 } from "@ant-design/icons";
 import icon from "../images/cryptocurrancy.png";
 const Navbar = () => {
-  const [activeMenu, setActiveMenu] = useState(true);
+  const [activeMenu, setActiveMenu] = useState(false);
   const [screenSize, setScreenSize] = useState(null);
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
@@ -34,7 +34,8 @@ const Navbar = () => {
         </Typography.Title>
       </div>
       <Button className="menu-control-container" onClick={()=>setActiveMenu((prev)=>!prev)}>
-        <MenuOutlined />
+        <MenuOutlined   />
+        
       </Button>
       {activeMenu && (
         <Menu theme="dark">

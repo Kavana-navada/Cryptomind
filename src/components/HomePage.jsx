@@ -30,6 +30,7 @@ const HomePage = () => {
           <Statistic
             title="Total Market Cap"
             value={millify(globalStas.totalMarketCap)}
+            
           />
         </Col>
         <Col span={12}>
@@ -50,7 +51,7 @@ const HomePage = () => {
         <Title level={2} className="home-title">
           Top 10 Cryptocurrencies in the world
         </Title>
-        <Title level={3} className="show-more">
+        <Title level={5} className="show-more">
           <Link to="/cryptocurrencies">Show more </Link>
         </Title>
       </div>
@@ -60,7 +61,7 @@ const HomePage = () => {
         <Title level={2} className="home-title">
           Latest Crypto News
         </Title>
-        <Title level={3} className="show-more">
+        <Title level={5} className="show-more">
           <Link to="/news">Show more </Link>
         </Title>
       </div>
