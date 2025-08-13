@@ -57,6 +57,10 @@ const News = ({ simplified }) => {
                   style={{ width: "100px", height: "80px", objectFit: "cover" }}
                   src={news.media || demoImg}
                   alt="news"
+                  onError={(e) => {
+    e.currentTarget.onerror = null; // prevent infinite loop
+    e.currentTarget.src = demoImg;
+  }}
                 />
               </div>
               <p>

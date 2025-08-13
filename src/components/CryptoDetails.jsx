@@ -33,7 +33,7 @@ const CryptoDetails = () => {
 
   console.log(data);
   console.log("history", coinHistory);
-  if (isFetching || historyIFetching) return <Loader/>;
+  if (isFetching || historyIFetching) return <Loader />;
 
   const cryptoDetails = data?.data?.coin;
   const time = ["3h", "24h", "7d", "30d", "3m", "1y", "3y", "5y"];
@@ -114,6 +114,12 @@ const CryptoDetails = () => {
           market cap and supply.
         </p>
       </Col>
+      <Col className="coin-desc">
+        <Title level={3} className="coin-details-heading">
+          What is {cryptoDetails?.name}?
+        </Title>
+        <p> {cryptoDetails?.description}</p>
+      </Col>
       <Select
         defaultValue="7d"
         className="select-timeperiod"
@@ -122,9 +128,7 @@ const CryptoDetails = () => {
         value={timePeriod}
       >
         {time.map((t) => (
-          <Option  key={t}>
-            {t}
-          </Option>
+          <Option key={t}>{t}</Option>
         ))}
       </Select>
 
@@ -172,12 +176,6 @@ const CryptoDetails = () => {
         </Col>
       </Col>
       <Col className="coin-desc-link">
-        <Row className="coin-desc">
-          <Title level={3} className="coin-details-heading">
-            What is {cryptoDetails?.name}?
-          </Title>
-          <p> {cryptoDetails?.description}</p>
-        </Row>
         <Col className="coin-links">
           <Title level={3} className="coin-details-heading">
             {cryptoDetails?.name} Links

@@ -82,20 +82,31 @@ a:hover{
     align-items: center;
 }
 .heading, .home-title{
-    color:rgb(3, 74, 141)!important;
+   color: var(--pink) !important;
 
 }
-
+.coin-detail-container{
+    margin-left: 20px;
+}
+.statistic{
+   
+    padding: 5px 10px;
+    margin-bottom:10px !important;
+    border-left: 3px solid var(--border);
+    
+}
 @media screen and (min-width:800px){
     .main .routes{
         padding-left: 90px;
     }
+   
 }
 
 @media screen and (min-width:1000px){
     .main .routes{
         padding-left: 50px;
     }
+    
 }
 
 
@@ -145,7 +156,7 @@ a:hover{
 }
 
 .coin-detail-container{
-    margin: 30px;
+    margin: 10px;
 }
 
 .coin-heading-container{
@@ -172,23 +183,19 @@ a:hover{
 
 .stats-container{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
+   margin-top: 20px;
+  gap:20px;
+    
+    
 }
 
-.stats-container h2{
-    font-weight: 700;
-    font-size: 1.4rem;
-    margin-top: 20px;
-    color: var(--pink);
-}
 
 .coin-details-heading{
     font-weight: 700 !important;
     margin-top: 20px !important;
     color: var(--pink) !important;
 }
+
 
 .coin-stats{
     display: flex;
@@ -197,7 +204,6 @@ a:hover{
     font-size: 1rem;
     opacity: 0.9;
     padding: 20px;
-
 }
 
 .coin-stats-name{
@@ -210,6 +216,9 @@ a:hover{
     font-weight: 800;
 }
 
+.coin-value-statistics, .other-stats-info{
+    flex: 0.5;
+}
 .coin-value-statistics-heading p{
     font-size: 1rem;
     opacity: 0.9;
@@ -217,35 +226,25 @@ a:hover{
 
 .coin-desc-link{
     display: flex;
-    gap: 40px;
-    margin-top: 40px;
-    padding-top: 20px;
+    margin-top: 20px;
 }
 
-.coin-desc-link h2{
-    font-weight: 700;
-    color: var(--pink);
-}
 
 .coin-desc-link p{
     font-size: 1rem;
     opacity: 0.9;
 }
 
-.coin-desc-link a{
-    color: var(--pink);
-}
 
-.coin-desc-link h3{
-    font-weight: 700;
-}
+
 
 .coin-desc{
-    flex: 0.5;
+border-bottom: 1px solid var(--border);
+
 }
 
 .coin-links{
-  padding: 0px 20px;
+  
     flex: 0.5;
 }
 
@@ -279,9 +278,7 @@ a:hover{
     .coin-desc-link{
         flex-direction: column;
     }
-    .stats-container h2{
-        margin-top: 0px;
-    }
+  
 }
 
 @media screen and (max-width: 500px){
@@ -336,6 +333,7 @@ a:hover{
 }
 .chart-title{
     color: #0071bd !important;
+    font-weight: 700 !important;
 }
 .price-container{
     display: flex !important;
@@ -368,6 +366,7 @@ a:hover{
 }
 .crypto-card-container{
     min-height: 65vh !important;
+    
 }
 .crypto-card{
     min-width: 250px;
@@ -378,6 +377,7 @@ a:hover{
 .select-timeperiod{
     width: 200px !important;
     margin-top: 20px !important;
+    margin-bottom: 10px;
 }
 
 .footer {
