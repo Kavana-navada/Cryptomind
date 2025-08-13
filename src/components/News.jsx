@@ -3,7 +3,7 @@ import { Select, Typography, Row, Col, Avatar, Card } from "antd";
 import moment from "moment";
 import { useGetCryptoNewsQuery } from "../services/cryptoNewsApi";
 import { useGetCryptosQuery } from "../services/CryptoApi";
-
+import Loader from "./Loader"
 
 const { Text, Title } = Typography;
 const { option } = Select;
@@ -19,7 +19,7 @@ const News = ({ simplified }) => {
   });
   console.log("news", cryptoNews);
 
-  if (!cryptoNews) return "Loading...";
+  if (!cryptoNews) return <Loader/>
   if (cryptoNews.length === 0) {
   return <div>No news available for this category.</div>;
 }

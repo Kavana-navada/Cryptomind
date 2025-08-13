@@ -20,6 +20,7 @@ import {
   useGetCryptoDetailsQuery,
   useGetCryptoHistoryQuery,
 } from "../services/cryptoApi";
+import Loader from "./Loader";
 const { Title, Text } = Typography;
 const { Option } = Select;
 
@@ -32,7 +33,7 @@ const CryptoDetails = () => {
 
   console.log(data);
   console.log("history", coinHistory);
-  if (isFetching || historyIFetching) return "Loading...";
+  if (isFetching || historyIFetching) return <Loader/>;
 
   const cryptoDetails = data?.data?.coin;
   const time = ["3h", "24h", "7d", "30d", "3m", "1y", "3y", "5y"];
