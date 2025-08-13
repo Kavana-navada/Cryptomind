@@ -93,7 +93,7 @@ npm run build
 
 ---
 
-📸 Screenshots
+## 📸 Screenshots
 
 Home Page
 <img src="public/screenshots/homepage.png" alt="Home" width="100%"/>
@@ -115,6 +115,7 @@ Search coins or news
    &nbsp; &nbsp; &nbsp; &nbsp;
 <img src="public/screenshots/searchnews.png" alt="CryptoCurrencies" width="48%" />
 </div>
+
 Reponsiveness
 <div>
 <img src="public/screenshots/responsive.png" alt="responsive" height="600"/>
@@ -128,5 +129,4 @@ Reponsiveness
 
 ---
 
-If you want, I can also **add detailed usage instructions with GIFs showing navigation between pages** so your README looks more professional and engaging. That would make it stand out on GitHub.
 
