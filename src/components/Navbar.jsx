@@ -28,8 +28,8 @@ const Navbar = () => {
   return (
     <div className="nav-container">
       <div className="logo-container">
-        <Avatar src={icon} size="large" />
-        <Typography.Title level={2} className="logo">
+        <Avatar src={icon} size="large" className="logoimg"/>
+        <Typography.Title level={3} className="logo">
           <Link to="/">Cryptomind</Link>
         </Typography.Title>
       </div>

@@ -20,11 +20,13 @@ a:hover{
 .app{
     display: flex;
     overflow: hidden;
+    
+    
 }
 
 .navbar{
     flex: 0.2;
-    background-color: rgb(0, 21, 41);
+    background-color:  rgb(0, 21, 41);
 }
 
 .main{
@@ -38,9 +40,8 @@ a:hover{
 .nav-container{
     position: fixed;
     left: 0;
-    margin: 10px;
+    
     height: 100vh;
-    margin: 0px;
     background-color: rgb(0, 21, 41);
 }
 
@@ -48,11 +49,17 @@ a:hover{
     background-color: #001529;
     display: flex;
     padding: 20px;
-    align-items: center;
+  
     width: 100%;
+    
+}
+.logoimg{
+    background-color: white;
+    padding: 4px;
 }
 .logo{
     margin:0 0 0 15px;
+    align-content:end;
 }
 .logo a{
    color: white;
@@ -74,23 +81,18 @@ a:hover{
     align-items: center;
 }
 
-@media screen and (max-width:1300px){
-    .main{
-        margin-left: 50px;
+@media screen and (min-width:800px){
+    .main .routes{
+        padding-left: 90px;
     }
 }
 
-@media screen and (max-width:1170px){
-    .main{
-        margin-left: 50px;
+@media screen and (min-width:1000px){
+    .main .routes{
+        padding-left: 50px;
     }
 }
 
-@media screen and (max-width:1000px){
-    .main{
-        margin-left: 100px;
-    }
-}
 
 @media screen and (max-width:800px){
     .app{
