@@ -98,8 +98,10 @@ npm run build
 Home Page
 <img src="public/screenshots/homepage.png" alt="Home" width="100%"/>
 
+
 CryptoCurrencies Page
 <img src="public/screenshots/cryptocurrency.png" alt="CryptoCurrencies" width="100%"/>
+
 
 Coin Details
 <img src="public/screenshots/chart.png" alt="details" width="100%"/>
@@ -109,12 +111,14 @@ Coin Details
 News Page
 <img src="public/screenshots/news.png" alt="news" width="100%"/>
 
+
 Search coins or news
 <div>
 <img src="public/screenshots/searchcurrency.png" alt="search" width="48%" />
    &nbsp; &nbsp; &nbsp; &nbsp;
 <img src="public/screenshots/searchnews.png" alt="CryptoCurrencies" width="48%" />
 </div>
+
 
 Reponsiveness
 <div>
