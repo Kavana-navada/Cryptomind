@@ -27,10 +27,11 @@ const CryptoDetails = () => {
   const { coinId } = useParams();
   const [timePeriod, setTimePeriod] = useState("7d");
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
-  const { data:coinHistory, isFetching:historyIFetching } = useGetCryptoHistoryQuery({coinId,timePeriod});
+  const { data: coinHistory, isFetching: historyIFetching } =
+    useGetCryptoHistoryQuery({ coinId, timePeriod });
 
   console.log(data);
-  console.log("history",coinHistory);
+  console.log("history", coinHistory);
   if (isFetching || historyIFetching) return "Loading...";
 
   const cryptoDetails = data?.data?.coin;
@@ -44,7 +45,9 @@ const CryptoDetails = () => {
     { title: "Rank", value: cryptoDetails?.rank, icon: <NumberOutlined /> },
     {
       title: "24h Volume",
-      value: `${cryptoDetails?.["24hVolume"] && millify(cryptoDetails?.["24hVolume"])}`,
+      value: `${
+        cryptoDetails?.["24hVolume"] && millify(cryptoDetails?.["24hVolume"])
+      }`,
       icon: <ThunderboltOutlined />,
     },
     {
@@ -123,7 +126,11 @@ const CryptoDetails = () => {
         ))}
       </Select>
 
-      <LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails.price)} coinName={cryptoDetails.name}/>
+      <LineChart
+        coinHistory={coinHistory}
+        currentPrice={millify(cryptoDetails.price)}
+        coinName={cryptoDetails.name}
+      />
 
       <Col className="stats-container">
         <Col className="coin-value-statistics">
